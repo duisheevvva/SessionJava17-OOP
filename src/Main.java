@@ -46,6 +46,7 @@ public class Main {
 
         System.out.println("Count Java:" + countJava);
         System.out.println("Count JS:" + countJS);
+        System.out.println("Count JS:" + countJS);
 
 
         System.out.println(student1.getName());
