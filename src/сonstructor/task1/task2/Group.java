@@ -1,4 +1,4 @@
-package task2;
+package сonstructor.task1.task2;
 
 import java.time.LocalDate;
 
@@ -13,9 +13,10 @@ public class Group {
         this.mentor = mentor;
     }
 
+
     @Override
     public String toString() {
-        return "task2.Group{" +
+        return "сonstructor.task1.task2.Group{" +
                 "groupName='" + groupName + '\'' +
                 ", startDate=" + startDate +
                 ", mentor='" + mentor + '\'' +

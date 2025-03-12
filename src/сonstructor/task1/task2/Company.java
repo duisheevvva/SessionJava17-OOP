@@ -1,4 +1,4 @@
-package task2;
+package сonstructor.task1.task2;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -20,7 +20,7 @@ public class Company {
 
     @Override
     public String toString() {
-        return "task2.Company{" +
+        return "сonstructor.task1.task2.Company{" +
                 "companyName='" + companyName + '\'' +
                 ", country='" + country + '\'' +
                 ", foundationDate=" + foundationDate +

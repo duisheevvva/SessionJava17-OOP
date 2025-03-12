@@ -1,4 +1,4 @@
-package task1;
+package сonstructor.task1;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -30,7 +30,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "task1.Student{" +
+        return "сonstructor.task1.Student{" +
                 "name='" + name + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 ", phoneNumber='" + phoneNumber + '\'' +

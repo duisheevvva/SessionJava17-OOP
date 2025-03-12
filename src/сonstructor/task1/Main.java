@@ -1,4 +1,4 @@
-package task1;
+package сonstructor.task1;
 
 public class Main {
     public static void main(String[] args) {
