@@ -125,40 +125,36 @@ public class Customer {
 
     // TODO DELETE
     public Customer[] deleteCustomerById(long id,Customer[]customers){
-//        Customer deletedCustomer = getById(id,customers);
-//        long index = id-1;
+        // index arkyluu ochurushubuz kerek oshonduktan default index tuzduk
+        int index = -1;
 
-        int index = 0;
-
-        for (int i = 0; i < customers.length; i++) { // 0 == 0
-            if (customers[i].getId() == id){  // 1 == 1
+        // ochurulo turgan indextti taptyk
+        for (int i = 0; i < customers.length; i++) {
+            if (customers[i].getId() == id){
                 index = i;
+                break;
             }
         }
 
-        Customer[] newCustomers = new Customer[index];
-        for (int i = 0; i < newCustomers.length; i++) {
-            newCustomers[i] = customers[i];
+        if (index !=-1){
+            // eski massivden  razmeri 1 ge az bolgon jany massiv tuzduk
+            Customer [] newCustomers = new Customer[customers.length - 1];
+            // jany massivge eski massivtin ichinen tabylgan index ke cheinki dannyilardy kochurup aldyk
+            for (int i = 0; i < index; i++) {
+                newCustomers[i] = customers[i];
+            }
+
+            // jany massivge eski massivtin ichinen tabylgan indexten kiinki dannyilardy kochurup aldyk
+            for (int i = index; i < newCustomers.length; i++) {
+                newCustomers[i] = customers[i+1];
+            }
+
+            // jany massivtti eski indexkke barabarladyk
+            customers = newCustomers;
         }
 
 
-        Customer[] newCustomers2 = new Customer[customers.length - (newCustomers.length - 1)];
-        int nextIndex  = newCustomers.length;
-        for (int i = 0; i < newCustomers2.length; i++) {
-            newCustomers2[i] = customers[nextIndex];
-            nextIndex++;
-        }
-
-
-
-
-
-
-
-
-
-
-
+        return customers;
     }
 
 
