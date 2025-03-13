@@ -36,6 +36,16 @@ public class Main {
           // getById
         System.out.println("Get By Id Customer:  " + customer.getById(3, customers));
 
+        // TODO UPDATE
+        Customer updateCustomer = new Customer();
+        updateCustomer.setFirstName("Symbat");
+//        updateCustomer.setEmail("n@gmail.com");
+//        updateCustomer.setPhoneNumber("+996789554433");
+//        updateCustomer.setDateOfBirth(LocalDate.of(2003,4,6));
+
+        System.out.println("UPDATED ARRAY");
+        System.out.println(Arrays.toString(customer.updateCustomerById(2, customers, updateCustomer)));
+
 
     }
 }

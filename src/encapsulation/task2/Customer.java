@@ -98,6 +98,7 @@ public class Customer {
         return customers;
     }
 
+
     // TODO GET BY ID
     public Customer getById(long id, Customer [] customers){
         for (Customer customer : customers) {
@@ -107,6 +108,59 @@ public class Customer {
         }
         return null;
     }
+
+    // TODO UPDATE
+    // TODO ВЫ должны update кылып атканда определенный
+    //  полесин озгорткубуз келбесе эски данныйлар калыш керек
+    public Customer[] updateCustomerById(long id,Customer[] customers,Customer updateCustomer){
+        Customer oldCustomer = getById(id,customers);
+        oldCustomer.setFirstName(updateCustomer.getFirstName());
+        oldCustomer.setEmail(updateCustomer.getEmail());
+        oldCustomer.setPhoneNumber(updateCustomer.getPhoneNumber());
+        oldCustomer.setDateOfBirth(updateCustomer.getDateOfBirth());
+
+        return customers;
+    }
+
+
+    // TODO DELETE
+    public Customer[] deleteCustomerById(long id,Customer[]customers){
+//        Customer deletedCustomer = getById(id,customers);
+//        long index = id-1;
+
+        int index = 0;
+
+        for (int i = 0; i < customers.length; i++) { // 0 == 0
+            if (customers[i].getId() == id){  // 1 == 1
+                index = i;
+            }
+        }
+
+        Customer[] newCustomers = new Customer[index];
+        for (int i = 0; i < newCustomers.length; i++) {
+            newCustomers[i] = customers[i];
+        }
+
+
+        Customer[] newCustomers2 = new Customer[customers.length - (newCustomers.length - 1)];
+        int nextIndex  = newCustomers.length;
+        for (int i = 0; i < newCustomers2.length; i++) {
+            newCustomers2[i] = customers[nextIndex];
+            nextIndex++;
+        }
+
+
+
+
+
+
+
+
+
+
+
+    }
+
 
     @Override
     public String toString() {
